@@ -10,7 +10,7 @@ class WorkoutsDataSource @Inject constructor(
     private val jsonLoader: JsonLoader
 ) {
 
-    suspend fun getWorkoutPlan(forceRefresh: Boolean = false): FWResult<WorkoutPlanEntity> {
+    suspend fun getWorkoutPlan(): FWResult<WorkoutPlanEntity> {
         return safeApiCall(Dispatchers.IO) {
             jsonLoader.loadWorkoutPlan()
         }

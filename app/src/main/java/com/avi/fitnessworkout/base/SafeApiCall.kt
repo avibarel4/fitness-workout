@@ -10,6 +10,6 @@ suspend fun <T> safeApiCall(
     try {
         FWResult.Success(apiCall.invoke())
     } catch (throwable: Throwable) {
-        FWResult.Error(throwable.message)
+        FWResult.Error(throwable)
     }
 }

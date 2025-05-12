@@ -2,7 +2,7 @@ package com.avi.fitnessworkout.base
 
 sealed class FWResult<out T> {
     data class Success<T>(val data: T) : FWResult<T>()
-    data class Error(val message: String?) : FWResult<Nothing>()
+    data class Error(val message: Throwable) : FWResult<Nothing>()
 }
 
 fun <T> FWResult<T>.asSuccessValueOrNull(): T? = (this as? FWResult.Success)?.data
