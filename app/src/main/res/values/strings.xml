@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Fitness Workout</string>
+    
+    <string name="main_tabs_my_workout">My Workout</string>
+    <string name="main_tabs_exercises">Exercises</string>
+    <string name="main_tabs_progress">Progress</string>
+    <string name="main_tabs_settings">Settings</string>
+
 </resources>

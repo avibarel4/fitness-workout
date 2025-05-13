@@ -10,8 +10,10 @@ data class WorkoutPlanEntity(
 data class WorkoutDayEntity(
     @SerializedName("day")
     val day: Int,
+    @SerializedName("is_completed")
+    val isCompleted: Boolean,
     @SerializedName("workout")
-    val workout: List<ExerciseEntity>
+    val workouts: List<ExerciseEntity>
 )
 
 data class ExerciseEntity(
